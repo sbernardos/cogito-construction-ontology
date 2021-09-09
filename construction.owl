@@ -1,0 +1,352 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://cogito.iot.linkeddata.es/def/construction#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://cogito.iot.linkeddata.es/def/construction#">
+    <Prefix name="" IRI="https://cogito.iot.linkeddata.es/def/construction#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="bot" IRI="https://w3id.org/bot#"/>
+    <Prefix name="geo" IRI="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="const" IRI="https://cogito.iot.linkeddata.es/def/construction#"/>
+    <Prefix name="saref" IRI="https://saref.etsi.org/core#"/>
+    <Prefix name="s4city" IRI="https://saref.etsi.org/saref4city#"/>
+    <Prefix name="process" IRI="https://cogito.iot.linkeddata.es/def/process#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal>Alba Fernández Izquierdo</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal>Raúl García Castro</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal>Socorro  Bernardos Galindo</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <Literal>The COGITO Construction ontology aims at modelling the construction domain.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <Literal>Construction Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal>0.0.1</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="geo:SpatialThing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Construction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Element"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="QualityInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Space"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Zone"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="process:Process"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="process:Task"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="saref:Feature"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="saref:FeatureOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="s4city:KeyPerformanceIndicator"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="s4city:KeyPerformanceIndicatorAssessment"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="bot:Element"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="bot:Space"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="bot:Zone"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasElement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasQualityInformation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="process:isRelatedToBuilding"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="process:relatesToElement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="saref:assesses"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="s4city:quantifiesKPI"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="bot:containsZone"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="bot:hasElement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="bot:hasSpace"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="bot:hasSubElement"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="ifcIdentifier"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="Construction"/>
+        <Class abbreviatedIRI="bot:Zone"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Element"/>
+        <Class abbreviatedIRI="geo:SpatialThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Element"/>
+        <Class abbreviatedIRI="bot:Element"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="QualityInformation"/>
+        <Class abbreviatedIRI="s4city:KeyPerformanceIndicator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Space"/>
+        <Class abbreviatedIRI="bot:Space"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Zone"/>
+        <Class abbreviatedIRI="geo:SpatialThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Zone"/>
+        <Class abbreviatedIRI="bot:Zone"/>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasElement"/>
+        <ObjectProperty abbreviatedIRI="bot:hasElement"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="process:isRelatedToBuilding"/>
+        <Class abbreviatedIRI="process:Process"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="process:relatesToElement"/>
+        <Class abbreviatedIRI="process:Task"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="saref:assesses"/>
+        <Class abbreviatedIRI="s4city:KeyPerformanceIndicatorAssessment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="s4city:quantifiesKPI"/>
+        <Class abbreviatedIRI="s4city:KeyPerformanceIndicatorAssessment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="bot:containsZone"/>
+        <Class IRI="Zone"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasQualityInformation"/>
+        <Class IRI="QualityInformation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="process:isRelatedToBuilding"/>
+        <Class IRI="Construction"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="process:relatesToElement"/>
+        <Class IRI="Element"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="saref:assesses"/>
+        <Class abbreviatedIRI="saref:FeatureOfInterest"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="s4city:quantifiesKPI"/>
+        <Class abbreviatedIRI="s4city:KeyPerformanceIndicator"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="bot:hasElement"/>
+        <Class IRI="Element"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="bot:hasSpace"/>
+        <Class IRI="Space"/>
+    </ObjectPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="ifcIdentifier"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>geo:SpatialThing</AbbreviatedIRI>
+        <Literal>Spatial Thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Construction</IRI>
+        <Literal>Construction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Element</IRI>
+        <Literal>Element</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>QualityInformation</IRI>
+        <Literal>Quality Information</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Space</IRI>
+        <Literal>Space</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Zone</IRI>
+        <Literal>Zone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasElement</IRI>
+        <Literal>has element</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasQualityInformation</IRI>
+        <Literal>has quality information</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ifcIdentifier</IRI>
+        <Literal>IFC identifier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>process:Process</AbbreviatedIRI>
+        <Literal>Process</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>process:Task</AbbreviatedIRI>
+        <Literal>Task</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>process:isRelatedToBuilding</AbbreviatedIRI>
+        <Literal>is related to building</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>process:relatesToElement</AbbreviatedIRI>
+        <Literal>relates to element</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>saref:Feature</AbbreviatedIRI>
+        <Literal>Feature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>saref:FeatureOfInterest</AbbreviatedIRI>
+        <Literal>Feature of Interest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>saref:assesses</AbbreviatedIRI>
+        <Literal>assesses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>s4city:KeyPerformanceIndicator</AbbreviatedIRI>
+        <Literal>Key Performance Indicator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>s4city:KeyPerformanceIndicatorAssessment</AbbreviatedIRI>
+        <Literal>Key Performance Indicator Assessment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>s4city:quantifiesKPI</AbbreviatedIRI>
+        <Literal>quantifies KPI</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>bot:Element</AbbreviatedIRI>
+        <Literal>Element</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>bot:Space</AbbreviatedIRI>
+        <Literal>Space</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>bot:Zone</AbbreviatedIRI>
+        <Literal>Zone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>bot:containsZone</AbbreviatedIRI>
+        <Literal>contains zone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>bot:hasElement</AbbreviatedIRI>
+        <Literal>has element</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>bot:hasSpace</AbbreviatedIRI>
+        <Literal>has space</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>bot:hasSubElement</AbbreviatedIRI>
+        <Literal>has sub-element</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
